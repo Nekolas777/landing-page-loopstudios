@@ -204,7 +204,7 @@ ul.mobile {
 #creations {
     margin-top: var(--margin-section-top);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
     grid-template-rows: 80px 1fr 1fr;
     justify-items: start;
     align-items: start;
@@ -334,7 +334,19 @@ ul.mobile {
 
 /*-------------------------- MEDIA QUERYS --------------------------*/
 
+@media screen and (max-width: 465px) {
+
+    .banner > p {
+        font-size: 2.2rem !important;
+    }
+
+}
+
 @media screen and (max-width: 605px) {
+
+    .banner > p {
+        font-size: 3rem;
+    }
 
     #about-us {
         grid-template-columns: 1fr;
@@ -360,7 +372,16 @@ ul.mobile {
     /* CREATIONS SECTION */
 
     #creations .card > img {    
-        aspect-ratio: 12/ 4;
+        aspect-ratio: 10/ 4;
+    }
+
+    #creations .card > p {
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+
+    .tittle-container > .creations-cta {
+        display: none;
     }
 }
 
